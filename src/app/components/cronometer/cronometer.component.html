@@ -1,0 +1,9 @@
+<div id="cronometer-app">
+  <mat-button-toggle-group class="app-buttons">
+    <mat-button-toggle   (click)="changeChronometers()" mat-button exetend>Pomodoro</mat-button-toggle>
+    <mat-button-toggle  (click)="changeShortChronometers()"  mat-button exetend>Short Break</mat-button-toggle>
+    <mat-button-toggle  (click)="changeLongChronometers()"  mat-button exetend>Long Break</mat-button-toggle>
+  </mat-button-toggle-group>
+  <app-cronometers-display (passChronometer)="passChronometers($event)"></app-cronometers-display>
+</div>
+

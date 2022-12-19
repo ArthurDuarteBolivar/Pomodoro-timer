@@ -1,0 +1,13 @@
+<div id="app-cronometers">
+  <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+  <div class="cronometer-formated">
+    <h1>{{minutes$ | async}}</h1>
+    <h1>:</h1>
+    <h1>{{seconds1$ | async}}</h1>
+    <h1>{{seconds2$ | async}}</h1>
+  </div>
+  <button class="btn-start btn btn-success" *ngIf="stats; else elseStats" (click)="start()" >START</button>
+  <ng-template #elseStats>
+  <button class="btn-stop btn btn-danger"   (click)="stop()" >STOP</button>
+  </ng-template>
+</div>

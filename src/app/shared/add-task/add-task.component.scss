@@ -1,0 +1,21 @@
+#app-add-task{
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(90deg, rgba(56,133,138,1) 12%, rgba(57,112,151,1) 51%, rgba(186,73,73,1) 92%);
+  height: 100%;
+  width: 100%;
+  .example-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  h1{
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+}
+

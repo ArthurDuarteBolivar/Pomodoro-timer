@@ -1,0 +1,33 @@
+#app-cronometers {
+  mat-progress-bar {
+    padding: 6px;
+  }
+  display: flex;
+  flex-direction: column;
+  max-height: 100px;
+  h1 {
+    font-size: 8rem;
+    margin: 3.5rem auto;
+    padding: 2rem 0;
+    color: white;
+  }
+  .btn-start:hover {
+    box-shadow: 1px 1px green, 2px 2px green, 3px 3px green;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  .btn-stop:hover {
+    box-shadow: 1px 1px red, 2px 2px red, 3px 3px red;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  .cronometer-formated {
+    display: flex;
+    margin: auto;
+    h1 {
+      padding: 0;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}

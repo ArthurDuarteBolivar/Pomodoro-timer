@@ -1,0 +1,6 @@
+
+<div [ngStyle]="{'background': colorBackground}" id="app">
+  <app-nav-bar></app-nav-bar>
+  <app-cronometer (color)="color($event)" ></app-cronometer>
+  <app-tasks></app-tasks>
+</div>

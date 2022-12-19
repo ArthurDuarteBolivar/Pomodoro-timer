@@ -1,0 +1,20 @@
+<div id="app-add-task">
+  <h1 [ngStyle]="{'opacity': taskAdded}">Task added with success</h1>
+  <form class="example-form" [formGroup]="addTaskForm" (ngSubmit)="addTask()">
+    <mat-form-field class="example-full-width">
+      <mat-label>Title</mat-label>
+      <input type="email" matInput formControlName="title" >
+      <mat-error>
+        Title is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Description</mat-label>
+      <input type="email" matInput formControlName="title" >
+      <mat-error>
+        Title is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <input class="btn btn-primary" type="submit" value="Add">
+  </form>
+</div>
