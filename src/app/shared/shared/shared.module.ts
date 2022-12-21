@@ -8,8 +8,6 @@ import { MatInputModule } from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { AddTaskComponent } from '../add-task/add-task.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AppComponent } from 'src/app/app.component';
 
 
 @NgModule({
@@ -26,12 +24,10 @@ import { AppComponent } from 'src/app/app.component';
     MatInputModule,
     MatFormFieldModule,
     MatProgressBarModule,
-    NgbModule
   ],
   exports: [
     AddTaskComponent,
     CronometersDisplayComponent
   ],
-  bootstrap: [AppComponent]
 })
 export class SharedModule { }

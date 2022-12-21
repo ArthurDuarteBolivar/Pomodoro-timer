@@ -1,4 +1,4 @@
-import { decreaseSeconds2, decreaseSeconds1, setSeconds2, setSeconds1, decreaseMinutes } from './../../store/app.state';
+import { decreaseSeconds2, decreaseSeconds1, setSeconds2, setSeconds1, decreaseMinutes, reset } from './../../store/app.state';
 import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { map } from 'rxjs';
@@ -33,12 +33,11 @@ export class CronometersDisplayComponent {
     map(res => res.seconds2)
   )
 
-  @Input() stopChronometer: boolean = false;
 
   public resetProgress(){
     this.progress = 0;
   }
-  countProgress: number = 100 / (this.minutesStatic * 60)
+  countProgress: number = 100 / (this.minutesStatic * 48)
   start(){
     this.stats = false
     this.chronometerInterval = setInterval(() => {
@@ -58,8 +57,10 @@ export class CronometersDisplayComponent {
         this.store.dispatch(setSeconds1())
         this.store.dispatch(decreaseMinutes())
       }
-      if(minutes < 0){
-        this.passChronometer.emit(this.minutesStatic)
+      if(minutes <= 0){
+          this.passChronometer.emit(this.minutesStatic)
+          this.stop()
+          this.passChronometer.emit(5)
       }
     }, 1000)
   }

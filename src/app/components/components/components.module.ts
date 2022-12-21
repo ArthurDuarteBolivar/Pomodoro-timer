@@ -14,8 +14,6 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatInputModule} from '@angular/material/input';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AppComponent } from 'src/app/app.component';
 
 
 
@@ -38,13 +36,11 @@ import { AppComponent } from 'src/app/app.component';
     MatButtonToggleModule,
     MatInputModule,
     SharedModule,
-    NgbModule
   ],
   exports: [
     NavBarComponent,
     CronometerComponent,
     TasksComponent
   ],
-  bootstrap: [AppComponent]
 })
 export class ComponentsModule { }
